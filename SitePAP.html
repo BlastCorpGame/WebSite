@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Favicon.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blast Corps</title>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "E8lPzh2b7793p2qd1",
+        });
+    })();
+    </script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+<header>
+    <img src="Blast Corp Logo.png" alt="Imagem do Jogo">
+    
+</header>
+
+<nav>
+    <a href="javascript:void(0)" onclick="showTab('about')">About</a>
+    <a href="javascript:void(0)" onclick="showTab('images')">Images</a>
+    <a href="javascript:void(0)" onclick="showTab('contact')">Contact</a>
+    <a href="javascript:void(0)" onclick="showTab('download')">Download</a>
+</nav>
+
+<div class="content">
+    <div id="about" class="tab-content active-tab">
+        <h1>About</h1>
+        <p>Blast Corps  é um jogo de acção e sobrevivência com um estilo retro, passado num mundo pós-apocalíptico onde a civilização ruiu. Assume o papel de sobreviventes armados que tentam resistir a ameaças constantes de saqueadores.</p>
+    </div>
+
+    <div id="download" class="tab-content">
+        <h1>Download</h1>
+        <p>Clique no botão abaixo para baixar o jogo Blast Corps.</p>
+        <a href="Blast_Corps_Jogo.zip" download class="download-button">Baixar Jogo</a>
+    </div>    
+
+    <div id="images" class="tab-content">
+        <h1>Images</h1>
+        <p>Confere algumas imagens inspiradas no jogo:</p>
+    
+        <div class="image-grid">
+            <div class="image-box" style="background-image: url('daveIdle.png');"></div>
+            <div class="image-box" style="background-image: url('Idle_Enemy1.png');"></div>
+            <div class="image-box" style="background-image: url('mcivil.png');"></div>
+            <div class="image-box" style="background-image: url('player base.png');"></div>
+        </div>
+
+        <!-- Área de preview -->
+        <div id="imagePreviewContainer" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;"></div>
+    </div>    
+
+    <div id="contact" class="tab-content">
+        <h1>Contact</h1>
+        <div class="contact-form">
+            <form>
+                <h4>Name: </h4>
+                <input class="box" type="text" id="name" placeholder="Your name" required>
+                <h4>E-mail: </h4>
+                <input class="box" type="email" id="email" placeholder="Your E-mail" required>
+                <h4>Comment: </h4>
+                <textarea class="box" id="message" rows="5" placeholder="You comment...." required></textarea>
+                <button type="submit" onclick="sendEmail()">SEND</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Blast Corp. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function showTab(tabId) {
+        // Esconde todas as abas
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.classList.remove('active-tab');
+        });
+
+        // Mostra a aba clicada
+        const activeTab = document.getElementById(tabId);
+        activeTab.classList.add('active-tab');
+    }
+
+    function previewImage(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function() {
+        const imageData = reader.result;
+        localStorage.setItem('uploadedImage', imageData); // salva no navegador
+        displayImage(imageData);
+    }
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+}
+
+function displayImage(imageData) {
+    const imagePreview = document.getElementById('imagePreview');
+    imagePreview.src = imageData;
+    imagePreview.style.display = 'block';
+}
+
+// Quando a página carrega, verifica se já tem uma imagem salva
+window.onload = function() {
+    const savedImage = localStorage.getItem('uploadedImage');
+    if (savedImage) {
+        displayImage(savedImage);
+    }
+}
+        
+        reader.onload = function() {
+            const imagePreview = document.getElementById('imagePreview');
+            imagePreview.src = reader.result;
+            imagePreview.style.display = 'block'; // Exibe a imagem
+        }
+        
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+
+</script>
+
+</body>
+</html>

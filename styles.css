@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-image: url('https://via.placeholder.com/1920x1080?text=Blast+Corps+Background'); /* Imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+header {
+    background-color: black; /* Fundo semitransparente */
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 4px solid #f6b014;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #f6b014;
+}
+h2 {
+    color: #f6b014;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+nav {
+    background-color: black;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f6b014;
+}
+
+.content {
+    margin: 40px;
+    padding: 20px;
+    background-color:black; /* Fundo claro para o conteúdo */
+    border-radius: 10px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.active-tab {
+    display: block;
+}
+
+.tab-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-buttons button {
+    background-color: #34495e;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.tab-buttons button:hover {
+    background-color: #f6b014;
+}
+.box {
+    border: 2px solid ; 
+    border-color:black;
+    background-color: black; 
+    color: #f6b014;
+}
+input:focus {
+    border-color: #f6b014 ; /* Asegura que el borde siga siendo amarillo */
+}
+footer {
+    background-color: black;
+    color: #f6b014;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Estilos para a aba de contato */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #f6b014;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #f6b014;
+}
+
+/* Ajuste nos margens do conteúdo */
+.content {
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+/* Galeria de imagens estilo grade 2x2 */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 600px); /* define 2 colunas fixas de 600px */
+    column-gap: 0px;     /* sem espaço horizontal */
+    row-gap: 5px;        /* espaço mínimo entre linhas */
+    justify-content: center; /* centraliza a grade horizontalmente */
+    margin-top: 20px;
+}
+
+.image-grid img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    object-position: 30% 30%;
+    border-radius: 10px;
+    border: 1px solid #f6b014;
+    box-shadow: 0 0 10px #f6b01444;
+    background-color: black; /* <- fundo preto */
+}
+
+.image-box {
+    width: 600px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-color: black; /* <- fundo preto */
+    border-radius: 10px;
+    border: 1px solid #f6b014;
+    box-shadow: 0 0 10px #f6b01444;
+}
