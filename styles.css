@@ -160,3 +160,17 @@ footer {
     border: 1px solid #f6b014;
     box-shadow: 0 0 10px #f6b01444;
 }
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .imagem {
+    width: 100%;
+    height: auto;
+  }
+}
