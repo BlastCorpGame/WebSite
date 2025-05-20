@@ -149,7 +149,6 @@ footer {
     object-fit: cover;
     object-position: 30% 30%;
     border-radius: 10px;
-    border: 1px solid #f6b014;
     box-shadow: 0 0 10px #f6b01444;
     background-color: black; /* <- fundo preto */
 }
@@ -196,7 +195,7 @@ footer {
     width: 30px;
     }
     section{
-    width: 30px;
+    width: 50px;
     display: grid; 
     }
     
