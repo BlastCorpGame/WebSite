@@ -17,7 +17,7 @@ header {
 }
 logo{
     text-align: center;
-    width: auto;
+    width: 300px;
 }
 
 h1 {
@@ -186,5 +186,8 @@ footer {
     padding: 10px 0;
     font-size: 1rem;
   }
+    logo{
+    width: 300px;
+    }
     
 }
