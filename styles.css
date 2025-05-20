@@ -136,8 +136,8 @@ footer {
 /* Galeria de imagens estilo grade 2x2 */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 300px); /* define 2 colunas fixas de 600px */
-    column-gap: 0px;     /* sem espaço horizontal */
+    /*grid-template-columns: repeat(2, 300px); /* define 2 colunas fixas de 600px */
+    column-gap: 10px;     /* sem espaço horizontal */
     row-gap: 5px;        /* espaço mínimo entre linhas */
     justify-content: center; /* centraliza a grade horizontalmente */
     margin-top: 20px;
