@@ -155,11 +155,11 @@ footer {
 }
 
 .image-box {
-    width: 600px;
-    height: 600px;
+    width: auto;
+    height: auto;
     background-size: cover;
     background-position: center;
-    background-color: black; /* <- fundo preto */
+    background-color: black;
     border-radius: 10px;
     border: 1px solid #f6b014;
     box-shadow: 0 0 10px #f6b01444;
