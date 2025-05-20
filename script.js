@@ -2,6 +2,16 @@ const dropArea = document.getElementById('dropArea');
 const fileInput = document.getElementById('fileInput');
 const imagePreviewContainer = document.getElementById('imagePreviewContainer');
 
+function sendEmail() {
+  let params = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    message: document.getElementById('message').value,
+  }
+  emailjs.send('service_y7tur37', 'template_qfnxcbs', params)
+}
+
+
 // Clique abre o seletor de arquivos
 dropArea.addEventListener('click', () => fileInput.click());
 
