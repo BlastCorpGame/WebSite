@@ -15,6 +15,10 @@ header {
     text-align: center;
     border-bottom: 4px solid #f6b014;
 }
+logo{
+    text-align: center;
+    width: auto;
+}
 
 h1 {
     font-size: 3rem;
