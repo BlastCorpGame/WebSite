@@ -192,5 +192,9 @@ footer {
     navigationBar{
     width: 300px;
     }
+    img{
+    width: 30px;
+    }
+    
     
 }
