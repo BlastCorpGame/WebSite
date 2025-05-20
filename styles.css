@@ -143,8 +143,8 @@ footer {
     margin-top: 20px;
 }
 
-.image-grid img {
-    width: auto;
+.image-grid {
+    width: 452px;
     height: auto;
     object-fit: cover;
     object-position: 30% 30%;
