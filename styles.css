@@ -226,6 +226,8 @@ footer {
     display: block;
     padding: 10px 0;
     font-size: 1rem;
+    width: 50px;
+    height: 10px;
   }
     img.logo{
     width: 300px;
