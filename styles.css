@@ -1,4 +1,5 @@
-body {
+body 
+{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,8 +9,44 @@ body {
     background-position: center;
     color: white;
 }
+.slash-ad 
+{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #ffcc00;
+      color: #000;
+      overflow: hidden;
+      height: 40px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+}
 
-header {
+.message
+{
+      white-space: nowrap;
+      display: inline-block;
+      padding-left: 100%;
+      animation: deslizar 15s linear infinite;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+}
+@keyframes deslizar 
+{
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+}
+
+
+
+header 
+{
     background-color: black; /* Fundo semitransparente */
     padding: 40px 0;
     text-align: center;
