@@ -28,7 +28,7 @@ body
 {
       display: flex;
       white-space: nowrap;
-      animation: deslizar 20s linear infinite;
+      animation: deslizar 5s linear infinite;
 }
 
 .message 
