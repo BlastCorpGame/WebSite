@@ -33,6 +33,8 @@ body
       animation: deslizar 15s linear infinite;
       font-weight: bold;
       font-family: Arial, sans-serif;
+      background-color: #f6b014;
+    
 }
 @keyframes deslizar 
 {
