@@ -19,7 +19,7 @@ body
       background-color: #f6b014; /* Amarillo */
       color: #000;
       overflow: hidden;
-      height: 40px;
+      height: 20px;
       z-index: 1000;
       display: flex;
       align-items: center;
