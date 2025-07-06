@@ -7,139 +7,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blast Corps</title>
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-    (function(){
-        emailjs.init({
-            publicKey: "E8lPzh2b7793p2qd1",
-        });
-    })();
+        (function(){
+            emailjs.init({
+                publicKey: "E8lPzh2b7793p2qd1",
+            });
+        })();
     </script>
     <script src="script.js"></script>
-
 </head>
+
 <body>
+    <header>
+        <img class="logo" src="Blast Corp Logo.png" alt="Imagem do Jogo">
+    </header>
 
+    <nav class="navigationBar">
+        <a class="section" href="javascript:void(0)" onclick="showTab('about')">About</a>
+        <a class="section" href="javascript:void(0)" onclick="showTab('images')">Images</a>
+        <a class="section" href="javascript:void(0)" onclick="showTab('contact')">Contact</a>
+        <a class="section" href="javascript:void(0)" onclick="showTab('download')">Download</a>
+    </nav>
 
-<header>
-    <img class="logo" src="Blast Corp Logo.png" alt="Imagem do Jogo">
-    
-</header>
-
-<nav class="navigationBar">
-    <a class="section" href="javascript:void(0)" onclick="showTab('about')">About</a>
-    <a class="section" href="javascript:void(0)" onclick="showTab('images')">Images</a>
-    <a class="section" href="javascript:void(0)" onclick="showTab('contact')">Contact</a>
-    <a class="section" href="javascript:void(0)" onclick="showTab('download')">Download</a>
-</nav>
-
-<div class="content">
-    <div id="about" class="tab-content active-tab">
-        <h1><center>Blast Corps</center></h1>
-        <p><center>It’s a 2D action-survival game with a classic reimagined style, set in a world where enemies want to take control of an island. You take on the role of a lone soldier with a gun fighting off hordes of kidnappers, rescuing civilians and uncovering hidden secrets as you fight back. Survive, fight back and stop the enemy from taking over.</center></p>
-        <h1><center>Who Are We</center></h1>
-        <p><center></center></p>
-    </div>
-
-    <div id="download" class="tab-content">
-        <h1><center>Cooming Soon....</center></h1>
-       <!--<p>Clique no botão abaixo para baixar o jogo Blast Corps.</p>
-        <a href="Blast_Corps_Jogo.zip" download class="download-button">Baixar Jogo</a>-->
-    </div>    
-
-    <div id="images" class="tab-content">
-        <h1>Images</h1>
-    
-        <div class="image-grid">
-            <img width="70px" src="daveIdle.png">
-            <img width="70px" src="Idle_Enemy1.png">
-            <img width="70px" src="mcivil.png">
-            <img width="70px" src="player base.png">
-
-            <img src="WhatsApp Image 2025-07-05 at 22.39.26.jpeg" alt="Gameplay Praia">
-            <img src="WhatsApp Image 2025-07-05 at 22.39.29.jpeg" alt="Gameplay Floresta">
-            <img src="WhatsApp Image 2025-07-05 at 22.39.32.jpeg" alt="Gameplay Boss">
+    <div class="content">
+        <!-- Aba ABOUT -->
+        <div id="about" class="tab-content active-tab">
+            <h1><center>Blast Corps</center></h1>
+            <p><center>It’s a 2D action-survival game with a classic reimagined style, set in a world where enemies want to take control of an island. You take on the role of a lone soldier with a gun fighting off hordes of kidnappers, rescuing civilians and uncovering hidden secrets as you fight back. Survive, fight back and stop the enemy from taking over.</center></p>
+            
+            <h1><center>Who Are We</center></h1>
+            <p><center>Somos alunos do curso técnico de informática da Escola Básica e Secundária de Machico e também os representantes deste projeto final de curso.</center></p>
         </div>
 
-        <!-- Área de preview -->
-        <div id="imagePreviewContainer" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;"></div>
-    </div>    
+        <!-- Aba DOWNLOAD -->
+        <div id="download" class="tab-content">
+            <h1><center>Coming Soon...</center></h1>
+            <!-- <a href="Blast_Corps_Jogo.zip" download class="download-button">Baixar Jogo</a> -->
+        </div>    
 
-    <div id="contact" class="tab-content">
-        <h1>Contact</h1>
-        <div class="contact-form">
-            <form>
-                <h4>Name: </h4>
-                <input class="box" type="text" id="name" placeholder="Your name" required>
-                <h4>E-mail: </h4>
-                <input class="box" type="email" id="email" placeholder="Your E-mail" required>
-                <h4>Comment: </h4>
-                <textarea class="box" id="message" rows="5" placeholder="You comment...." required></textarea>
-                <button type="submit" onclick="sendEmail()">SEND</button>
-            </form>
+        <!-- Aba IMAGES -->
+        <div id="images" class="tab-content">
+            <h1>Images</h1>
+            <div class="image-grid">
+                <img width="70px" src="daveIdle.png">
+                <img width="70px" src="Idle_Enemy1.png">
+                <img width="70px" src="mcivil.png">
+                <img width="70px" src="player base.png">
+                <img src="WhatsApp Image 2025-07-05 at 22.39.26.jpeg" alt="Gameplay Praia">
+                <img src="WhatsApp Image 2025-07-05 at 22.39.29.jpeg" alt="Gameplay Floresta">
+                <img src="WhatsApp Image 2025-07-05 at 22.39.32.jpeg" alt="Gameplay Boss">
+            </div>
+            <div id="imagePreviewContainer" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;"></div>
+        </div>
+
+        <!-- Aba CONTACT -->
+        <div id="contact" class="tab-content">
+            <h1>Contact</h1>
+            <div class="contact-form">
+                <form>
+                    <h4>Name:</h4>
+                    <input class="box" type="text" id="name" placeholder="Your name" required>
+                    <h4>E-mail:</h4>
+                    <input class="box" type="email" id="email" placeholder="Your E-mail" required>
+                    <h4>Comment:</h4>
+                    <textarea class="box" id="message" rows="5" placeholder="Your comment..." required></textarea>
+                    <button type="submit" onclick="sendEmail()">SEND</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
-<footer>
-    <p>&copy; 2025 Blast Corp. All Rights Reserved.</p>
-</footer>
+    <footer>
+        <p>&copy; 2025 Blast Corp. All Rights Reserved.</p>
+    </footer>
 
-<script>
-    function showTab(tabId) {
-        // Esconde todas as abas
-        const tabs = document.querySelectorAll('.tab-content');
-        tabs.forEach(tab => {
-            tab.classList.remove('active-tab');
-        });
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active-tab'));
+            document.getElementById(tabId).classList.add('active-tab');
+        }
 
-        // Mostra a aba clicada
-        const activeTab = document.getElementById(tabId);
-        activeTab.classList.add('active-tab');
-    }
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function () {
+                const imageData = reader.result;
+                localStorage.setItem('uploadedImage', imageData);
+                displayImage(imageData);
+            };
+            if (file) reader.readAsDataURL(file);
+        }
 
-    function previewImage(event) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-
-    reader.onload = function() {
-        const imageData = reader.result;
-        localStorage.setItem('uploadedImage', imageData); // salva no navegador
-        displayImage(imageData);
-    }
-
-    if (file) {
-        reader.readAsDataURL(file);
-    }
-}
-
-function displayImage(imageData) {
-    const imagePreview = document.getElementById('imagePreview');
-    imagePreview.src = imageData;
-    imagePreview.style.display = 'block';
-}
-
-// Quando a página carrega, verifica se já tem uma imagem salva
-window.onload = function() {
-    const savedImage = localStorage.getItem('uploadedImage');
-    if (savedImage) {
-        displayImage(savedImage);
-    }
-}
-        
-        reader.onload = function() {
+        function displayImage(imageData) {
             const imagePreview = document.getElementById('imagePreview');
-            imagePreview.src = reader.result;
-            imagePreview.style.display = 'block'; // Exibe a imagem
-        }
-        
-        if (file) {
-            reader.readAsDataURL(file);
+            if (imagePreview) {
+                imagePreview.src = imageData;
+                imagePreview.style.display = 'block';
+            }
         }
 
-</script>
-
+        window.onload = function () {
+            const savedImage = localStorage.getItem('uploadedImage');
+            if (savedImage) {
+                displayImage(savedImage);
+            }
+        };
+    </script>
 </body>
 </html>
