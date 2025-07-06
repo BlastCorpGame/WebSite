@@ -1,63 +1,59 @@
-body 
-{
+/* ----------- ESTILO GERAL ----------- */
+body {
     font-family: Arial, sans-serif;
     padding: 0;
     background-color: black;
-    background-image: url('https://via.placeholder.com/1920x1080?text=Blast+Corps+Background'); /* Imagem de fundo */
+    background-image: url('https://via.placeholder.com/1920x1080?text=Blast+Corps+Background');
     background-size: cover;
     background-position: center;
     color: white;
 }
-.slash-ad 
-{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #f6b014;
-      color: #000;
-      overflow: hidden;
-      height: 40px;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
+
+/* ----------- BARRA DE ANÚNCIO SUPERIOR ----------- */
+.slash-ad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f6b014;
+    color: #000;
+    overflow: hidden;
+    height: 40px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
 }
 
-.scroll-container 
-{
-      display: flex;
-      white-space: nowrap;
-      animation: deslizar 5s linear infinite;
+.scroll-container {
+    display: flex;
+    white-space: nowrap;
+    animation: deslizar 5s linear infinite;
 }
 
-.message 
-{
-      font-weight: bold;
-      font-family: Arial, sans-serif;
-      padding: 0 50px; /* espacio entre mensajes duplicados */
+.message {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding: 0 50px;
 }
 
-@keyframes deslizar 
-{
-      0% {
+@keyframes deslizar {
+    0% {
         transform: translateX(0%);
-      }
-      100% {
+    }
+    100% {
         transform: translateX(-50%);
-      }
+    }
 }
 
-
-
-header 
-{
-    background-color: black; /* Fundo semitransparente */
+/* ----------- CABEÇALHO ----------- */
+header {
+    background-color: black;
     padding: 40px 0;
     text-align: center;
     border-bottom: 4px solid #f6b014;
-    padding-top: 40px;
 }
-logo{
+
+logo {
     text-align: center;
     width: auto;
 }
@@ -67,6 +63,7 @@ h1 {
     margin: 0;
     color: #f6b014;
 }
+
 h2 {
     color: #f6b014;
 }
@@ -75,6 +72,7 @@ p {
     font-size: 1.2rem;
 }
 
+/* ----------- NAVEGAÇÃO ----------- */
 nav {
     background-color: black;
     overflow: hidden;
@@ -95,13 +93,16 @@ nav a:hover {
     background-color: #f6b014;
 }
 
+/* ----------- CONTEÚDO PRINCIPAL ----------- */
 .content {
-    margin: 40px;
+    margin: 40px auto;
     padding: 20px;
-    background-color:black; /* Fundo claro para o conteúdo */
+    background-color: black;
     border-radius: 10px;
+    max-width: 1200px;
 }
 
+/* ----------- ABAS ----------- */
 .tab-content {
     display: none;
 }
@@ -127,28 +128,21 @@ nav a:hover {
 .tab-buttons button:hover {
     background-color: #f6b014;
 }
+
+/* ----------- INPUTS ----------- */
 .box {
-    border: 2px solid ; 
-    border-color:black;
-    background-color: black; 
-    color: #f6b014;
-}
-input:focus {
-    border-color: #f6b014 ; /* Asegura que el borde siga siendo amarillo */
-}
-footer {
+    border: 2px solid black;
     background-color: black;
     color: #f6b014;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 40px;
 }
 
-/* Estilos para a aba de contato */
-.contact-form input, .contact-form textarea {
+input:focus {
+    border-color: #f6b014;
+}
+
+/* ----------- FORMULÁRIO DE CONTATO ----------- */
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -169,79 +163,85 @@ footer {
     background-color: #f6b014;
 }
 
-/* Ajuste nos margens do conteúdo */
-.content {
-    margin: 40px auto;
-    max-width: 1200px;
-}
-
-/* Galeria de imagens estilo grade 2x2 */
+/* ----------- GALERIA DE IMAGENS (2x2 ou responsiva) ----------- */
 .image-grid {
     display: grid;
-    /*grid-template-columns: repeat(2, 300px); /* define 2 colunas fixas de 600px */
-    column-gap: 10px;     /* sem espaço horizontal */
-    row-gap: 5px;        /* espaço mínimo entre linhas */
-    justify-content: center; /* centraliza a grade horizontalmente */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
     margin-top: 20px;
 }
 
-.image-grid {
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    object-position: 30% 30%;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #f6b01444;
-    background-color: black; /* <- fundo preto */
-}
-
-.image-box {
-    width: auto;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    background-color: black;
-    border-radius: 10px;
-    border: 1px solid #f6b014;
-    box-shadow: 0 0 10px #f6b01444;
-}
-@media (max-width: 400px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .menu {
-    flex-direction: column;
-  }
-
-  .imagem {
+.image-grid img {
     width: 100%;
+    max-width: 300px;
     height: auto;
-  }
-  nav {
-    text-align: left;
-    padding: 15px;
-  }
-  nav a {
-    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(246, 176, 20, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: black;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(246, 176, 20, 0.6);
+}
+
+/* ----------- FOOTER ----------- */
+footer {
+    background-color: black;
+    color: #f6b014;
+    text-align: center;
     padding: 10px 0;
-    font-size: 1rem;
-    width: 50px;
-    height: 10px;
-  }
-    img.logo{
-    width: 300px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* ----------- MEDIA QUERIES PARA MOBILE ----------- */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
     }
-    navigationBar{
-    width: 300px;
+
+    .menu {
+        flex-direction: column;
     }
-    img{
-    width: 30px;
+
+    .imagem {
+        width: 100%;
+        height: auto;
     }
-    section{
-    width: 50px;
-    display: grid; 
+
+    nav {
+        text-align: left;
+        padding: 15px;
     }
-    
-    
+
+    nav a {
+        display: block;
+        padding: 10px 0;
+        font-size: 1rem;
+        width: 50px;
+        height: 10px;
+    }
+
+    img.logo {
+        width: 300px;
+    }
+
+    navigationBar {
+        width: 300px;
+    }
+
+    img {
+        width: 30px;
+    }
+
+    section {
+        width: 50px;
+        display: grid;
+    }
 }
