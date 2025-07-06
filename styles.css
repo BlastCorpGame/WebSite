@@ -188,6 +188,25 @@ input:focus {
     box-shadow: 0 6px 16px rgba(246, 176, 20, 0.6);
 }
 
+/* ----------- BOTÃO DE DOWNLOAD ----------- */
+.download-button {
+    background-color: #f6b014;
+    color: black;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(246, 176, 20, 0.3);
+}
+
+.download-button:hover {
+    background-color: #d89e0d;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(246, 176, 20, 0.5);
+}
+
 /* ----------- FOOTER ----------- */
 footer {
     background-color: black;
